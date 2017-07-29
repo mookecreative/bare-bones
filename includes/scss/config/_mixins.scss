@@ -1,0 +1,15 @@
+// TranslateY
+@mixin translateY($args) {
+  -webkit-transform: translateY($args);
+    -moz-transform: translateY($args);
+    -ms-transform: translateY($args);
+    transform: translateY($args);
+}
+
+// Transition
+@mixin transitionAll($args) {
+  -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    transition: $args;
+}

@@ -1,0 +1,21 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+
+// Typography
+h1, h2, h3, h4, h5, h6{
+  font-family: $main-font;
+  font-weight: 300;
+  line-height: 1.1;
+  color: $main-color;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-size: $main-font-size;
+}
+
+p{
+  font-size: $body-size;
+  margin: 0 0 10px;
+}
