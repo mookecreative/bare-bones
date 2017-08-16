@@ -2,21 +2,39 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+
+        // Concatinates bower files into main structure
+        bower_concat: {
+         all: {
+           dest: {
+            'js': 'includes/js/libs/bower.js',
+            'css': 'includes/scss/external/_bower.scss'
+           },
+           dependencies: {
+             'underscore': 'jquery',
+           },
+           bowerOptions: {
+             relative: false
+           }
+         }
+       },
+
         // Compiles all js files into one
         concat: {
             dist: {
                 src: [
+                    'includes/js/libs/*.js', // bower
                     'includes/js/*.js',
                 ],
-                dest: 'includes/js/scripts/main.js',
+                dest: 'includes/js/src/main.js',
             }
         },
 
         // Minifis file
         uglify: {
             build: {
-                src: 'includes/js/scripts/main.js',
-                dest: 'includes/js/scripts/main.min.js'
+                src: 'includes/js/src/main.js',
+                dest: 'includes/js/dist/main.min.js'
             }
         },
 
@@ -39,7 +57,7 @@ module.exports = function(grunt) {
           },
           my_target: {
             src: 'includes/css/*.css',
-            dest: 'includes/css/main.min.css'
+            dest: 'includes/css/dist/main.min.css'
           }
         },
 
@@ -82,7 +100,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-bower-concat');
 
-    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'cssmin', 'watch']);
+    grunt.registerTask('default', ['bower_concat', 'concat', 'uglify', 'sass', 'cssmin', 'watch']);
 
 };

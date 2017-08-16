@@ -1,0 +1,22 @@
+{
+  "name": "bare-bones",
+  "description": "Required dependencies for bare-bones",
+  "main": "index.php",
+  "authors": [
+    "LMWD (hello@lukemoody.co.uk)"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "gsap": "^1.20.2"
+  }
+}
