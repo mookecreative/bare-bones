@@ -90,7 +90,26 @@ module.exports = function(grunt) {
                 files: ['includes/scss/**/*.scss'],
                 tasks: ['sass', 'cssmin', 'notify:cssmin']
             }
-        }
+        },
+
+        // BrowserSync
+        browserSync: {
+           dev: {
+               bsFiles: {
+                   src : [
+                      'includes/css/dist/main.min.css',
+                      'includes/js/dist/main.min.js',
+                      '/*.html',
+                      '/*.php'
+                   ]
+               },
+               options: {
+                    proxy: "http://local.dev/", // Replace this with your local dev environment to work with BrowserSync local host
+                    watchTask: true,
+                    // server: './'
+               }
+           }
+       }
 
     });
 
@@ -101,7 +120,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-bower-concat');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
-    grunt.registerTask('default', ['bower_concat', 'concat', 'uglify', 'sass', 'cssmin', 'watch']);
+    grunt.registerTask('default', ['bower_concat', 'concat', 'uglify', 'sass', 'cssmin', 'browserSync', 'watch']);
 
 };

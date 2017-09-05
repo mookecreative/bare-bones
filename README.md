@@ -7,7 +7,7 @@ This README documents the requirements for bare-bones boilerplate, created by Lu
 Boilerplate for bespoke front-end developments.
 
 * bare-bones
-* Version 2.0.2
+* Version 3.0.2
 * https://lukemoody.co.uk
 
 ### What's being used? ###
@@ -19,6 +19,7 @@ Boilerplate for bespoke front-end developments.
 * Font Awesome
 * jQuery
 * Sass
+* BrowserSync
 
 ### Who do I talk to? ###
 
