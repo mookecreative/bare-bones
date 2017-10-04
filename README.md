@@ -21,6 +21,14 @@ Boilerplate for bespoke front-end developments.
 * Sass
 * BrowserSync
 
+### How to install? ###
+
+Assuming that Grunt has been installed and the project has already been configured with a package.json and a Gruntfile:
+
+* Change to the project's root directory.
+* Install project dependencies with `npm install`
+* Run Grunt with `grunt`
+
 ### Who do I talk to? ###
 
 * LMWD
