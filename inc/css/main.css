@@ -1,7 +1,7 @@
 /*
  *
  * Bare Bones
- * Bare Bones v3.0.1
+ * Bare Bones v3.0.3
  * Created by Luke Moody ( https://lukemoody.co.uk )
  * Licensed under the MIT license ( https://opensource.org/licenses/MIT )
  *
@@ -242,7 +242,7 @@ th {
 
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
