@@ -7,8 +7,8 @@ module.exports = function(grunt) {
         bower_concat: {
          all: {
            dest: {
-            'js': 'includes/js/libs/bower.js',
-            'css': 'includes/scss/external/_bower.scss'
+            'js': 'inc/js/libs/bower.js',
+            'css': 'inc/scss/external/_bower.scss'
            },
            dependencies: {
              'underscore': 'jquery',
@@ -23,18 +23,18 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    'includes/js/libs/*.js', // bower
-                    'includes/js/*.js',
+                    'inc/js/libs/*.js', // bower
+                    'inc/js/*.js',
                 ],
-                dest: 'includes/js/src/main.js',
+                dest: 'inc/js/src/main.js',
             }
         },
 
         // Minifis file
         uglify: {
             build: {
-                src: 'includes/js/src/main.js',
-                dest: 'includes/js/dist/main.min.js'
+                src: 'inc/js/src/main.js',
+                dest: 'inc/js/dist/main.min.js'
             }
         },
 
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
               style: 'expanded'
             },
             files: {
-              'includes/css/main.css': 'includes/scss/main.scss'
+              'inc/css/main.css': 'inc/scss/main.scss'
             }
           }
         },
@@ -56,8 +56,8 @@ module.exports = function(grunt) {
             'processImport': false
           },
           my_target: {
-            src: 'includes/css/*.css',
-            dest: 'includes/css/dist/main.min.css'
+            src: 'inc/css/*.css',
+            dest: 'inc/css/dist/main.min.css'
           }
         },
 
@@ -80,14 +80,14 @@ module.exports = function(grunt) {
         // Watches files being saved, automatically updates
         watch: {
             scripts: {
-                files: ['includes/js/**/*.js'],
+                files: ['inc/js/**/*.js'],
                 tasks: ['concat', 'uglify', 'notify:uglify'],
                 options: {
                     spawn: false,
                 },
             },
             css: {
-                files: ['includes/scss/**/*.scss'],
+                files: ['inc/scss/**/*.scss'],
                 tasks: ['sass', 'cssmin', 'notify:cssmin']
             }
         },
@@ -97,8 +97,8 @@ module.exports = function(grunt) {
            dev: {
                bsFiles: {
                    src : [
-                      'includes/css/dist/main.min.css',
-                      'includes/js/dist/main.min.js',
+                      'inc/css/dist/main.min.css',
+                      'inc/js/dist/main.min.js',
                       '/*.html',
                       '/*.php'
                    ]
