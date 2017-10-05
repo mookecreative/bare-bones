@@ -1,16 +1,35 @@
 {
-  "name": "grunt-compile",
-  "version": "0.1.0",
+  "name": "bare-bones",
+  "version": "4.0.1",
+  "author": "Luke Moody <hello@lukemoody.co.uk>",
+  "homepage": "https://github.com/mookecreative/bare-bones",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mookecreative/bare-bones"
+  },
+  "bugs": {
+    "url": "hhttps://github.com/mookecreative/bare-bones/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-bower-concat": "^1.0.0",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-cssmin": "^0.12.2",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^0.6.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-notify": "^0.4.1",
-    "grunt-sass": "^1.2.1"
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.2",
+    "gulp-watch": "^4.3.11"
+  },
+  "dependencies": {
+    "gulp-cssnano": "^2.1.2",
+    "gulp-flatten": "^0.3.1",
+    "gulp-rename": "^1.2.2",
+    "pump": "^1.0.2"
   }
 }
