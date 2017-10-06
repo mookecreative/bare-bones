@@ -45,7 +45,7 @@ gulp.task('concat', function () {
 // browser-sync
 gulp.task('browserSync', function() {
   browserSync.init({
-    proxy: "http://grunt-to-gulp-rebuild:8888/", // http://local.dev/ Replace this with your local dev environment to work with BrowserSync local host
+    proxy: "http://local.dev/", // Replace this with your local dev environment to work with BrowserSync local host
     watchTask: true,
   })
 });
