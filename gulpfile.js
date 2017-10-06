@@ -1,8 +1,4 @@
-
-// https://css-tricks.com/gulp-for-beginners/
-// https://gist.github.com/atelic/8eb577e87a477a0fb411
-// http://clubmate.fi/bower-and-gulp-match-made-in-heaven-also/
-
+// Vars
 var gulp           = require('gulp');
     browserSync    = require('browser-sync').create();
     minifyCSS      = require('gulp-minify-css'),
@@ -13,7 +9,7 @@ var gulp           = require('gulp');
     mainBowerFiles = require('main-bower-files');
     watch          = require('gulp-watch');
 
-// Sass
+// gulp-sass
 gulp.task('sass', function(){
     return gulp.src('inc/scss/**/*.scss')
     .pipe(sass())
@@ -27,14 +23,14 @@ gulp.task('sass', function(){
     }))
 });
 
-// Bower - mainBowerFiles is used as a src for the task, usually you pipe stuff through a task
+// main-bower-files - used as a src for the task, usually you pipe stuff through a task
 gulp.task('bower', function() {
   return gulp.src(mainBowerFiles())
     // Pipe it to wanted directory
     .pipe(gulp.dest('inc/js/libs')) // only js currently
 });
 
-// JS Concat and Uglify
+// gulp-concat & gulp-uglify
 gulp.task('concat', function () {
   gulp.src(['inc/js/libs/*.js' , 'inc/js/*.js'])
     .pipe(concat('main.js'))
@@ -46,7 +42,7 @@ gulp.task('concat', function () {
     .pipe(gulp.dest('dist')); // dist/main.min.js
 });
 
-// BrowserSync
+// browser-sync
 gulp.task('browserSync', function() {
   browserSync.init({
     proxy: "http://grunt-to-gulp-rebuild:8888/", // http://local.dev/ Replace this with your local dev environment to work with BrowserSync local host
@@ -54,7 +50,7 @@ gulp.task('browserSync', function() {
   })
 });
 
-// Gulp Watch
+// gulp-watch
 gulp.task('watch', ['browserSync', 'sass', 'concat', 'bower'], function (){
   gulp.watch('inc/scss/**/*.scss', ['sass']);
   gulp.watch('inc/js/*.js', ['concat']);
