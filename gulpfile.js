@@ -11,6 +11,7 @@ var gulp           = require('gulp');
     prefix         = require('gulp-autoprefixer')
     sass           = require('gulp-sass');
     mainBowerFiles = require('main-bower-files');
+    watch          = require('gulp-watch');
 
 // Sass
 gulp.task('sass', function(){
@@ -20,19 +21,16 @@ gulp.task('sass', function(){
     .pipe(prefix('last 2 versions'))
     .pipe(concat('main.min.css')) // concatinated css file inc/css/main.css
     .pipe(minifyCSS())
-    .pipe(gulp.dest('inc/css/dist')) // minified css file inc/css/dist/main.min.css
+    .pipe(gulp.dest('dist')) // minified css file dist/main.min.css
     .pipe(browserSync.reload({
       stream: true // watched by BrowserSync
     }))
 });
 
-// Bower
+// Bower - mainBowerFiles is used as a src for the task, usually you pipe stuff through a task
 gulp.task('bower', function() {
-  // mainBowerFiles is used as a src for the task,
-  // usually you pipe stuff through a task
   return gulp.src(mainBowerFiles())
-    // Then pipe it to wanted directory, I use
-    // dist/lib but it could be anything really
+    // Pipe it to wanted directory
     .pipe(gulp.dest('inc/js/libs')) // only js currently
 });
 
@@ -45,13 +43,13 @@ gulp.task('concat', function () {
   gulp.src(['inc/js/libs/*.js' , 'inc/js/*.js'])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('inc/js/dist')); // inc/js/dist/main.min.js
+    .pipe(gulp.dest('dist')); // dist/main.min.js
 });
 
 // BrowserSync
 gulp.task('browserSync', function() {
   browserSync.init({
-    proxy: "http://bare-bones-gulp:8888/", // http://local.dev/ Replace this with your local dev environment to work with BrowserSync local host
+    proxy: "http://grunt-to-gulp-rebuild:8888/", // http://local.dev/ Replace this with your local dev environment to work with BrowserSync local host
     watchTask: true,
   })
 });

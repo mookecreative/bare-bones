@@ -7,8 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bare Bones Boilerplate by Luke Moody - lukemoody.co.uk</title>
 
-    <link href="inc/css/dist/main.min.css" rel="stylesheet" />
-    <!-- <link href="inc/css/main.css" rel="stylesheet"> -->
+    <link href="dist/main.min.css" rel="stylesheet" />
 
     <link rel="icon" href="inc/assets/logo/favicon.png" type="image/x-icon" />
     <link rel="shortcut icon" href="inc/assets/logo/favicon.png" type="image/x-icon" />
@@ -33,7 +32,7 @@
     <![endif]-->
 
   </head>
-  <body>
+  <body class="<?=basename($_SERVER['PHP_SELF'],'.php')?>">
 
     <div class="container spacing">
       <div class="row">
@@ -45,9 +44,6 @@
       </div>
     </div>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>  -->
-
-    <script src="inc/js/dist/main.min.js"></script>
-
+    <script src="dist/main.min.js"></script>
   </body>
 </html>
