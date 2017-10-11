@@ -16,14 +16,12 @@ Boilerplate for bespoke front-end developments.
 * Bower
 * Gulp
 * TweenMax
-* Font Awesome
+* FontAwesome v4.7.0
 * jQuery
 * Sass
 * BrowserSync
 
 ### How to install? ###
-
-Assuming that Gulp has been installed and the project has already been configured with a package.json, bower.json and a gulpfile.json:
 
 * Change to the project's root directory.
 * Install project dependencies with `npm install`
