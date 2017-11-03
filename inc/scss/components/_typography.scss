@@ -1,0 +1,36 @@
+/*
+ * Fonts
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+
+/*
+ * Typography
+ */
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $main-font;
+  color: $main-color;
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0 0 20px 0;
+}
+
+h1 { font-size: $main-font-size; }
+h2 { font-size: $sub-font-size; }
+h3 { font-size: $sub-font-size; }
+h4 { font-size: $sub-font-size; }
+h5 { font-size: $sub-font-size; }
+h6 { font-size: $sub-font-size; }
+
+p{
+  font-size: $body-size;
+  margin: 0 0 10px;
+}
+
+a{
+  &:hover{
+    border: 0;
+    outline: 0;
+  }
+}

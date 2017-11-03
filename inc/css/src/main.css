@@ -1,11 +1,38 @@
 /*
  *
  * Bare Bones
- * Bare Bones v4.0.1
+ * Bare Bones v4.0.3
  * Created by Luke Moody ( https://lukemoody.co.uk )
  * Licensed under the MIT license ( https://opensource.org/licenses/MIT )
  *
  *
+ */
+/*
+ * Font Stacks
+ */
+/*
+ * Font Sizes
+ */
+/*
+ * Colours
+ */
+/*
+ * Media Queries
+ */
+/*
+ * Grid Sizes
+ */
+/*
+ * Spacing
+ */
+/*
+ * TranslateY
+ */
+/*
+ * TranslateX
+ */
+/*
+ * Transitions
  */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 html {
@@ -373,6 +400,11 @@ fieldset[disabled] input[type="checkbox"] {
 .container-fluid:after,
 .row:after {
   clear: both; }
+
+input,
+textarea,
+select {
+  display: block; }
 
 .nopadding {
   padding: 0 !important; }
@@ -885,31 +917,36 @@ fieldset[disabled] input[type="checkbox"] {
   .grid-lg-offset-0 {
     margin-left: 0; } }
 
+/*
+ * Fonts
+ */
+/*
+ * Typography
+ */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif;
+  color: #000000;
   font-weight: 600;
   line-height: 1.1;
-  color: #000000;
-  margin-top: 0px;
-  margin-bottom: 20px; }
+  margin: 0 0 20px 0; }
 
 h1 {
-  font-size: 2.25em; }
+  font-size: 1.625em; }
 
 h2 {
-  font-size: 2.25em; }
+  font-size: 1.313em; }
 
 h3 {
-  font-size: 2.25em; }
+  font-size: 1.313em; }
 
 h4 {
-  font-size: 2.25em; }
+  font-size: 1.313em; }
 
 h5 {
-  font-size: 2.25em; }
+  font-size: 1.313em; }
 
 h6 {
-  font-size: 2.25em; }
+  font-size: 1.313em; }
 
 p {
   font-size: 1em;
@@ -3255,3 +3292,22 @@ a:hover {
   margin: 0;
   overflow: visible;
   clip: auto; }
+
+/*
+ * XLarge Devices, Wide Screens
+ */
+/*
+ * Large Devices, Wide Screens
+ */
+/*
+ * Medium Devices, Desktops
+ */
+/*
+ * Small Devices, Tablets
+ */
+/*
+ * Extra Small Devices, Phones
+ */
+/*
+ * Custom, iPhone Retina
+ */

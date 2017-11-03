@@ -1,4 +1,7 @@
-// TranslateY
+/*
+ * TranslateY
+ */
+
 @mixin translateY($args) {
   -webkit-transform: translateY($args);
     -moz-transform: translateY($args);
@@ -6,7 +9,21 @@
     transform: translateY($args);
 }
 
-// Transition
+/*
+ * TranslateX
+ */
+
+@mixin translateX($args) {
+  -webkit-transform: translateX($args);
+    -moz-transform: translateX($args);
+    -ms-transform: translateX($args);
+    transform: translateX($args);
+}
+
+/*
+ * Transitions
+ */
+
 @mixin transitionAll($args) {
   -webkit-transition: $args;
     -moz-transition: $args;
