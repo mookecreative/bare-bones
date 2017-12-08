@@ -7,7 +7,7 @@ This README documents the requirements for bare-bones, created by Luke Moody (LM
 Boilerplate for bespoke front-end developments.
 
 * bare-bones
-* Version 4.0.3
+* Version 4.0.4
 * https://lukemoody.co.uk
 
 ### Structure ###

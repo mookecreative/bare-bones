@@ -1,21 +1,41 @@
 /*
- * Font Stacks
+ * Imported Fonts
  */
 
-$main-font: 'Open Sans', sans-serif;
-$sub-font: 'Open Sans', sans-serif;
-$body-font: 'Open Sans', sans-serif;
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 
 /*
- * Font Sizes
+ * Font Variables
  */
 
-$main-font-size: 1.625em; // 26px
-$sub-font-size: 1.313em; // 21px
-$body-size: 1.000em; // 16px
+ $main-font: 'Helvetica', sans-serif;
+ $sub-font: 'Helvetica', sans-serif;
+ $body-font: 'Helvetica', sans-serif;
 
 /*
- * Colours
+ * Type Variables
+ */
+
+$heading-font-one-d: 2.250em; // 36px;
+$heading-font-two-d: 1.875em; // 30px;
+$heading-font-three-d: 1.750em; // 28px;
+$heading-font-four-d: 1.313em; // 21px;
+$heading-font-five-d: 1.125em; // 18px;
+$heading-font-six-d: 0.750em; // 12px;
+
+$heading-font-one-m: 1.875em; // 30px;
+$heading-font-two-m: 1.750em; // 28px;
+$heading-font-three-m: 1.313em; // 21px;
+$heading-font-four-m: 1.125em; // 18px;
+$heading-font-five-m: 1.000em; // 16px
+$heading-font-six-m: 0.750em; // 12px;
+
+$body-size-d: 1.000em; // 16px
+$body-size-m: 0.875em; // 14px
+$body-size-xs: 0.750em; // 12px
+
+/*
+ * Colour Variables
  */
 
 $main-color: #000000;
@@ -24,14 +44,14 @@ $sub-color: #000000;
 $white: #ffffff;
 
 /*
- * Media Queries
+ * Media Querie Variables
  */
 
 $media-max: max-width;
 $media-min: min-width;
 
 /*
- * Grid Sizes
+ * Grid Size Variables
  */
 
 $xlarge-grid: 1440px;
@@ -42,8 +62,8 @@ $xsmall-grid: 480px;
 $xxsmall-grid: 320px;
 
 /*
- * Spacing
+ * Spacing Variables
  */
 
-$spacing: 100px;
-$spacing-half: 50px;
+$spacing-d: 75px;
+$spacing-m: 45px;
