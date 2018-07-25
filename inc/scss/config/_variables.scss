@@ -44,20 +44,37 @@ $sub-color: #000000;
 $white: #ffffff;
 
 /*
- * Media Querie Variables
+ * Media Query Type Variables
  */
 
 $media-max: max-width;
 $media-min: min-width;
 
 /*
- * Grid Size Variables
+ * Grid Variables
+ */
+
+// Grid Breakpoints
+$grid-breakpoint-1: 1280px;
+$grid-breakpoint-2: 1080px;
+$grid-breakpoint-3: 768px;
+
+// Grid Container Widths
+$grid-container-width-1: 1180px;
+$grid-container-width-2: 980px;
+$grid-container-width-3: 750px;
+
+// Grid Gutter Size
+$gutter-width: 20px;
+
+/*
+ * Responsive Breakpoint Variables
  */
 
 $xlarge-grid: 1440px;
 $large-grid: 1200px;
 $medium-grid: 992px;
-$small-grid: 768px;
+$small-grid: 767px;
 $xsmall-grid: 480px;
 $xxsmall-grid: 320px;
 
@@ -67,3 +84,4 @@ $xxsmall-grid: 320px;
 
 $spacing-d: 75px;
 $spacing-m: 45px;
+$spacing-screen: 3vw;
