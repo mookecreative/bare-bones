@@ -1,12 +1,44 @@
 /*
+ * Mixins to create grid elements
+ */
+
+// @mixin createContainer - create the container
+@mixin createContainer( $gutter-width ){
+  padding-left: $gutter-width / 1;
+  padding-right: $gutter-width / 1;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// @mixin createRow - create the row
+@mixin createRow( $gutter-width ){
+  margin-right: $gutter-width / -2;
+  margin-left: $gutter-width / -2;
+}
+
+// @mixin addColGutter - add gutter to column as padding
+@mixin addColGutter(){
+  padding-left: $gutter-width / 2;
+  padding-right: $gutter-width / 2;
+}
+
+// @mixin gridContainerBreakpoint - create grid container breakpoint
+@mixin gridContainerBreakpoint( $media-type , $set-breakpoint , $width ){
+  @media only screen and ( $media-type : $set-breakpoint ) {
+    max-width: $width;
+    @content;
+  }
+}
+
+/*
  * TranslateY
  */
 
 @mixin translateY($args) {
   -webkit-transform: translateY($args);
-    -moz-transform: translateY($args);
-    -ms-transform: translateY($args);
-    transform: translateY($args);
+     -moz-transform: translateY($args);
+      -ms-transform: translateY($args);
+          transform: translateY($args);
 }
 
 /*
@@ -15,9 +47,9 @@
 
 @mixin translateX($args) {
   -webkit-transform: translateX($args);
-    -moz-transform: translateX($args);
-    -ms-transform: translateX($args);
-    transform: translateX($args);
+     -moz-transform: translateX($args);
+      -ms-transform: translateX($args);
+          transform: translateX($args);
 }
 
 /*
@@ -27,6 +59,6 @@
 @mixin transitionAll($args) {
   -webkit-transition: $args;
     -moz-transition: $args;
-    -ms-transition: $args;
-    transition: $args;
+     -ms-transition: $args;
+         transition: $args;
 }

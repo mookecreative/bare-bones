@@ -20,13 +20,19 @@
  * Colour Variables
  */
 /*
- * Media Querie Variables
+ * Media Query Type Variables
  */
 /*
- * Grid Size Variables
+ * Grid Variables
+ */
+/*
+ * Responsive Breakpoint Variables
  */
 /*
  * Spacing Variables
+ */
+/*
+ * Mixins to create grid elements
  */
 /*
  * TranslateY
@@ -230,7 +236,7 @@ th {
 
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
   font-family: "Helvetica", sans-serif;
@@ -409,38 +415,51 @@ select {
   display: block; }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-right: auto;
   margin-left: auto; }
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px; } }
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px; } }
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px; } }
+  @media only screen and (min-width: 768px) {
+    .container {
+      max-width: 750px; } }
+  @media only screen and (min-width: 1080px) {
+    .container {
+      max-width: 980px; } }
+  @media only screen and (min-width: 1280px) {
+    .container {
+      max-width: 1180px; } }
+  .container:before, .container:after {
+    display: table;
+    content: " ";
+    clear: both; }
 
 .container-fluid {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-right: auto;
   margin-left: auto; }
+  .container-fluid:before, .container-fluid:after {
+    display: table;
+    content: " ";
+    clear: both; }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px; }
+  margin-right: -10px;
+  margin-left: -10px; }
+  .row:before, .row:after {
+    display: table;
+    content: " ";
+    clear: both; }
+  @media only screen and (max-width: 768px) {
+    .row {
+      margin-left: 0;
+      margin-right: 0; } }
 
 .grid-xs-1, .grid-sm-1, .grid-md-1, .grid-lg-1, .grid-xs-2, .grid-sm-2, .grid-md-2, .grid-lg-2, .grid-xs-3, .grid-sm-3, .grid-md-3, .grid-lg-3, .grid-xs-4, .grid-sm-4, .grid-md-4, .grid-lg-4, .grid-xs-5, .grid-sm-5, .grid-md-5, .grid-lg-5, .grid-xs-6, .grid-sm-6, .grid-md-6, .grid-lg-6, .grid-xs-7, .grid-sm-7, .grid-md-7, .grid-lg-7, .grid-xs-8, .grid-sm-8, .grid-md-8, .grid-lg-8, .grid-xs-9, .grid-sm-9, .grid-md-9, .grid-lg-9, .grid-xs-10, .grid-sm-10, .grid-md-10, .grid-lg-10, .grid-xs-11, .grid-sm-11, .grid-md-11, .grid-lg-11, .grid-xs-12, .grid-sm-12, .grid-md-12, .grid-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .grid-xs-1, .grid-xs-2, .grid-xs-3, .grid-xs-4, .grid-xs-5, .grid-xs-6, .grid-xs-7, .grid-xs-8, .grid-xs-9, .grid-xs-10, .grid-xs-11, .grid-xs-12 {
   float: left; }
@@ -704,7 +723,7 @@ select {
   .grid-sm-offset-0 {
     margin-left: 0; } }
 
-@media (min-width: 992px) {
+@media (min-width: 1080px) {
   .grid-md-1, .grid-md-2, .grid-md-3, .grid-md-4, .grid-md-5, .grid-md-6, .grid-md-7, .grid-md-8, .grid-md-9, .grid-md-10, .grid-md-11, .grid-md-12 {
     float: left; }
   .grid-md-12 {
@@ -810,7 +829,7 @@ select {
   .grid-md-offset-0 {
     margin-left: 0; } }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .grid-lg-1, .grid-lg-2, .grid-lg-3, .grid-lg-4, .grid-lg-5, .grid-lg-6, .grid-lg-7, .grid-lg-8, .grid-lg-9, .grid-lg-10, .grid-lg-11, .grid-lg-12 {
     float: left; }
   .grid-lg-12 {
@@ -935,7 +954,7 @@ h1, h2, h3, h4, h5, h6,
 h1,
 .heading-one {
   font-size: 2.25em; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     h1,
     .heading-one {
       font-size: 1.875em; } }
@@ -943,7 +962,7 @@ h1,
 h2,
 .heading-two {
   font-size: 1.875em; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     h2,
     .heading-two {
       font-size: 1.75em; } }
@@ -951,7 +970,7 @@ h2,
 h3,
 .heading-three {
   font-size: 1.75em; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     h3,
     .heading-three {
       font-size: 1.313em; } }
@@ -959,7 +978,7 @@ h3,
 h4,
 .heading-four {
   font-size: 1.313em; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     h4,
     .heading-four {
       font-size: 1.125em; } }
@@ -967,7 +986,7 @@ h4,
 h5,
 .heading-five {
   font-size: 1.125em; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     h5,
     .heading-five {
       font-size: 1em; } }
@@ -975,7 +994,7 @@ h5,
 h6,
 .heading-six {
   font-size: 0.75em; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     h6,
     .heading-six {
       font-size: 0.75em; } }
@@ -984,7 +1003,7 @@ p {
   font-size: 1em;
   line-height: 1.3;
   margin: 0 0 20px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     p {
       font-size: 0.875em; } }
 
@@ -1010,20 +1029,20 @@ a {
 .spacing {
   padding-top: 75px;
   padding-bottom: 75px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     .spacing {
       padding-top: 45px;
       padding-bottom: 45px; } }
 
 .spacing_top {
   padding-top: 75px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     .spacing_top {
       padding-top: 45px; } }
 
 .spacing_btm {
   padding-bottom: 75px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     .spacing_btm {
       padding-bottom: 45px; } }
 
