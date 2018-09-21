@@ -1,48 +1,17 @@
-/*
- *
- * Bare Bones
- * Bare Bones v4.0.4
- * Created by Luke Moody ( https://lukemoody.co.uk )
- * Licensed under the MIT license ( https://opensource.org/licenses/MIT )
- *
- *
- */
-/*
- * Imported Fonts
- */
-/*
- * Font Variables
- */
-/*
- * Type Variables
- */
-/*
- * Colour Variables
- */
-/*
- * Media Query Type Variables
- */
-/*
- * Grid Variables
- */
-/*
- * Responsive Breakpoint Variables
- */
-/*
- * Spacing Variables
- */
-/*
- * Mixins to create grid elements
- */
-/*
- * TranslateY
- */
-/*
- * TranslateX
- */
-/*
- * Transitions
- */
+@charset "UTF-8";
+/*================ Modules ================*/
+/*================ Font Variables ================*/
+/*================ Type Variables ================*/
+/*================ Type Line Height Variables ================*/
+/*================ Font Weight Variables ================*/
+/*================ Colour Variables ================*/
+/*================ Media Query Type Variables ================*/
+/*================ Grid Variables – http://gridcalculator.dk/ ================*/
+/*================ Global Input Variables ================*/
+/*================ Spacing Variables ================*/
+/*================ Mixins to create grid elements ================*/
+/*================ Global Mixins ================*/
+/*================ Components ================*/
 html {
   font-family: "Helvetica", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -409,11 +378,63 @@ fieldset[disabled] input[type="checkbox"] {
 .row:after {
   clear: both; }
 
-input,
-textarea,
+/*================ Global Button Styles ================*/
+.btn,
+button {
+  display: inline-block;
+  min-width: 140px;
+  text-align: center; }
+
+/*================ Input ================*/
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  border: 1px solid #000000;
+  height: 40px;
+  padding: 0 10px;
+  color: #000000;
+  display: block; }
+
+input[type="submit"] {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  height: 40px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #000000; }
+
+/*================ Textarea ================*/
+textarea {
+  border: 1px solid #000000; }
+
+/*================ Select ================*/
 select {
   display: block; }
 
+/*================ Label ================*/
+label {
+  display: block; }
+
+/*================ Placeholder overrides ================*/
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #000000; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000000; }
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #000000; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #000000; }
+
+/*================ Grid ================*/
 .container {
   padding-left: 10px;
   padding-right: 10px;
@@ -935,81 +956,83 @@ select {
   .grid-lg-offset-0 {
     margin-left: 0; } }
 
-/*
- * Typography
- */
+/*================ Global Typography Styles ================*/
 h1, h2, h3, h4, h5, h6,
-.heading-one,
-.heading-two,
-.heading-three,
-.heading-four,
-.heading-five,
-.heading-six {
+.h-1, .h-2, .h-3, .h-4, .h-5, .h-6 {
   font-family: "Helvetica", sans-serif;
   color: #000000;
-  font-weight: 400;
-  line-height: 1.2;
   margin: 0 0 20px 0; }
 
 h1,
-.heading-one {
-  font-size: 2.25em; }
+.h-1 {
+  font-size: 2.25em;
+  line-height: 1.2;
+  font-weight: 400; }
   @media only screen and (max-width: 767px) {
     h1,
-    .heading-one {
+    .h-1 {
       font-size: 1.875em; } }
 
 h2,
-.heading-two {
-  font-size: 1.875em; }
+.h-2 {
+  font-size: 1.875em;
+  line-height: 1.2;
+  font-weight: 400; }
   @media only screen and (max-width: 767px) {
     h2,
-    .heading-two {
+    .h-2 {
       font-size: 1.75em; } }
 
 h3,
-.heading-three {
-  font-size: 1.75em; }
+.h-3 {
+  font-size: 1.75em;
+  line-height: 1.2;
+  font-weight: 400; }
   @media only screen and (max-width: 767px) {
     h3,
-    .heading-three {
+    .h-3 {
       font-size: 1.313em; } }
 
 h4,
-.heading-four {
-  font-size: 1.313em; }
+.h-4 {
+  font-size: 1.313em;
+  line-height: 1.2;
+  font-weight: 400; }
   @media only screen and (max-width: 767px) {
     h4,
-    .heading-four {
+    .h-4 {
       font-size: 1.125em; } }
 
 h5,
-.heading-five {
-  font-size: 1.125em; }
+.h-5 {
+  font-size: 1.125em;
+  line-height: 1.2;
+  font-weight: 400; }
   @media only screen and (max-width: 767px) {
     h5,
-    .heading-five {
+    .h-5 {
       font-size: 1em; } }
 
 h6,
-.heading-six {
-  font-size: 0.75em; }
+.h-6 {
+  font-size: 0.75em;
+  line-height: 1.2;
+  font-weight: 400; }
   @media only screen and (max-width: 767px) {
     h6,
-    .heading-six {
+    .h-6 {
       font-size: 0.75em; } }
 
 p {
   font-size: 1em;
   line-height: 1.3;
+  font-weight: 400;
   margin: 0 0 20px; }
   @media only screen and (max-width: 767px) {
     p {
       font-size: 0.875em; } }
 
-/*
- * Links
- */
+/*================ Global Link Styles ================*/
 a {
   -webkit-transition: color 0.6s ease;
   -moz-transition: color 0.6s ease;
@@ -1023,9 +1046,7 @@ a {
   a:focus, a:active, avisited {
     text-decoration: none; }
 
-/*
- * Spacing, Layout & Content Positioning
- */
+/*================ Spacing, Layout & Content Positioning ================*/
 .spacing {
   padding-top: 75px;
   padding-bottom: 75px; }
@@ -1052,6 +1073,8 @@ a {
 .no_margin {
   margin: 0; }
 
+/*================ Layouts ================*/
+/*================ Third-party ================*/
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -1060,8 +1083,8 @@ a {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("/inc/fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("/inc/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("/inc/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("/inc/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("/inc/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("/inc/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../inc/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../inc/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../inc/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../inc/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../inc/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../inc/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -3385,6 +3408,7 @@ a {
   overflow: visible;
   clip: auto; }
 
+/*================ Responsive ================*/
 /*
  * XLarge Devices, Wide Screens
  */
