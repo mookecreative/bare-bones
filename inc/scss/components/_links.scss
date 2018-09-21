@@ -1,0 +1,16 @@
+/*================ Global Link Styles ================*/
+
+a{
+  @include transitionAll(color .6s ease);
+  &:hover{
+    color: $main-color;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+  }
+  &:focus,
+  &:active,
+  &visited{
+    text-decoration: none;
+  }
+}

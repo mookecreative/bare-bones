@@ -1,5 +1,52 @@
-input,
-textarea,
+/*================ Input ================*/
+
+input[type="text"],
+input[type="email"],
+input[type="tel"]{
+  border: 1px solid $body-color;
+  height: $input-height;
+  padding: $input-padding;
+  color: $body-color;
+  display: block;
+}
+
+input[type="submit"]{
+  @include transitionAll(all 0.6s ease);
+  height: $input-height;
+  text-align: center;
+  color: $white;
+  background-color: $main-color;
+}
+
+/*================ Textarea ================*/
+
+textarea{
+  border: 1px solid $body-color;
+}
+
+/*================ Select ================*/
+
 select{
   display: block;
+}
+
+/*================ Label ================*/
+
+label{
+  display: block;
+}
+
+/*================ Placeholder overrides ================*/
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $body-color;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $body-color;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $body-color;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $body-color;
 }

@@ -1,6 +1,4 @@
-/*
- * Mixins to create grid elements
- */
+/*================ Mixins to create grid elements ================*/
 
 // @mixin createContainer - create the container
 @mixin createContainer( $gutter-width ){
@@ -30,10 +28,9 @@
   }
 }
 
-/*
- * TranslateY
- */
+/*================ Global Mixins ================*/
 
+// TranslateY
 @mixin translateY($args) {
   -webkit-transform: translateY($args);
      -moz-transform: translateY($args);
@@ -41,10 +38,7 @@
           transform: translateY($args);
 }
 
-/*
- * TranslateX
- */
-
+// TranslateX
 @mixin translateX($args) {
   -webkit-transform: translateX($args);
      -moz-transform: translateX($args);
@@ -52,10 +46,7 @@
           transform: translateX($args);
 }
 
-/*
- * Transitions
- */
-
+// Transitions
 @mixin transitionAll($args) {
   -webkit-transition: $args;
     -moz-transition: $args;

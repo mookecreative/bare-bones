@@ -1,34 +1,31 @@
 @charset "UTF-8";
 
-/*
- *
- * Bare Bones
- * Bare Bones v4.0.4
- * Created by Luke Moody ( https://lukemoody.co.uk )
- * Licensed under the MIT license ( https://opensource.org/licenses/MIT )
- *
- *
- */
+/*================ Modules ================*/
 
-  // Configuration
-  @import 'config/variables';
-  @import 'config/mixins';
+@import 'modules/variables';
+@import 'modules/mixins';
 
-  // Base
-  @import 'components/core';
-  @import 'components/buttons';
-  @import 'components/forms';
-  @import 'components/grid';
-  @import 'components/typography';
-  @import 'components/layout';
+/*================ Components ================*/
 
-  // Components
-  @import 'layouts/header';
-  @import 'layouts/page';
-  @import 'layouts/footer';
+@import 'components/core';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/grid';
+@import 'components/typography';
+@import 'components/links';
+@import 'components/spacing';
 
-  // Externals
-  @import 'external/font_awesome';
+/*================ Layouts ================*/
 
-  // Responsive
-  @import 'layouts/responsive';
+@import 'layouts/header';
+@import 'layouts/page';
+@import 'layouts/posts';
+@import 'layouts/footer';
+
+/*================ Third-party ================*/
+
+@import 'vendor/fontawesome-v4';
+
+/*================ Responsive ================*/
+
+@import 'layouts/responsive';

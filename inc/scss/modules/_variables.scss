@@ -1,20 +1,12 @@
-/*
- * Imported Fonts
- */
+/*================ Font Variables ================*/
 
 // @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 
-/*
- * Font Variables
- */
+$main-font: 'Helvetica', sans-serif;
+$sub-font: 'Helvetica', sans-serif;
+$body-font: 'Helvetica', sans-serif;
 
- $main-font: 'Helvetica', sans-serif;
- $sub-font: 'Helvetica', sans-serif;
- $body-font: 'Helvetica', sans-serif;
-
-/*
- * Type Variables
- */
+/*================ Type Variables ================*/
 
 $heading-font-one-d: 2.250em; // 36px;
 $heading-font-two-d: 1.875em; // 30px;
@@ -34,25 +26,35 @@ $body-size-d: 1.000em; // 16px
 $body-size-m: 0.875em; // 14px
 $body-size-xs: 0.750em; // 12px
 
-/*
- * Colour Variables
- */
+/*================ Type Line Height Variables ================*/
+
+$heading-font-one-lh: 1.2;
+$heading-font-two-lh: 1.2;
+$heading-font-three-lh: 1.2;
+$heading-font-four-lh: 1.2;
+$heading-font-five-lh: 1.2;
+$heading-font-six-lh: 1.2;
+$paragraph-lh: 1.3;
+
+/*================ Font Weight Variables ================*/
+
+$font-weight-l: 300;
+$font-weight-n: 400;
+$font-weight-b: 600;
+
+/*================ Colour Variables ================*/
 
 $main-color: #000000;
 $body-color: #000000;
 $sub-color: #000000;
 $white: #ffffff;
 
-/*
- * Media Query Type Variables
- */
+/*================ Media Query Type Variables ================*/
 
 $media-max: max-width;
 $media-min: min-width;
 
-/*
- * Grid Variables
- */
+/*================ Grid Variables – http://gridcalculator.dk/ ================*/
 
 // Grid Breakpoints
 $grid-breakpoint-1: 1280px;
@@ -67,10 +69,7 @@ $grid-container-width-3: 750px;
 // Grid Gutter Size
 $gutter-width: 20px;
 
-/*
- * Responsive Breakpoint Variables
- */
-
+// Responsive Breakpoint Variables
 $xlarge-grid: 1440px;
 $large-grid: 1200px;
 $medium-grid: 992px;
@@ -78,9 +77,12 @@ $small-grid: 767px;
 $xsmall-grid: 480px;
 $xxsmall-grid: 320px;
 
-/*
- * Spacing Variables
- */
+/*================ Global Input Variables ================*/
+
+$input-height: 40px;
+$input-padding: 0 10px;
+
+/*================ Spacing Variables ================*/
 
 $spacing-d: 75px;
 $spacing-m: 45px;

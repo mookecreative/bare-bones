@@ -1,1 +1,7 @@
-// Button styles here
+/*================ Global Button Styles ================*/
+.btn,
+button{
+  display: inline-block;
+  min-width: 140px;
+  text-align: center;
+}
