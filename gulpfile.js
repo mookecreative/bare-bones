@@ -1,6 +1,4 @@
-/*
- * Vars
- */
+/*================ Variables ================*/
 
 var gulp           = require('gulp');
     browserSync    = require('browser-sync').create();
@@ -9,13 +7,10 @@ var gulp           = require('gulp');
     uglify         = require('gulp-uglify')
     prefix         = require('gulp-autoprefixer')
     sass           = require('gulp-sass');
-    mainBowerFiles = require('main-bower-files');
     watch          = require('gulp-watch');
     plumber        = require('gulp-plumber');
 
-/*
- * gulp-sass
- */
+/*================ gulp-sass ================*/
 
 gulp.task('sass', function(){
   gulp.src('inc/scss/**/*.scss')
@@ -31,36 +26,33 @@ gulp.task('sass', function(){
     }))
 });
 
-/*
- * main-bower-files
- * used as a src for the task, usually you pipe stuff through a task
- */
-
-gulp.task('bower', function() {
-  return gulp.src(mainBowerFiles())
-    // Pipe it to wanted directory
-    .pipe(gulp.dest('inc/js/libs')) // only js currently
-});
-
-/*
- * gulp-concat & gulp-uglify
- */
+/*================ gulp-concat & gulp-uglify ================*/
 
 gulp.task('concat', function () {
-  gulp.src(['inc/js/libs/*.js' , 'inc/js/*.js'])
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('inc/js/src')); // inc/js/src/main.js
+  // inc/js/src/main.js
+  gulp.src([
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/gsap/TweenlineMax.js',
+    'inc/js/libs/*.js',
+    'inc/js/*.js'
+  ])
+  .pipe(concat('main.js'))
+  .pipe(gulp.dest('inc/js/src'));
 
-  gulp.src(['inc/js/libs/*.js' , 'inc/js/*.js'])
-    .pipe(concat('main.min.js'))
-    .pipe(plumber())
-    .pipe(uglify())
-    .pipe(gulp.dest('dist')); // dist/main.min.js
+  // dist/main.min.js
+  gulp.src([
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/gsap/TweenlineMax.js',
+    'inc/js/libs/*.js',
+    'inc/js/*.js'
+  ])
+  .pipe(concat('main.min.js'))
+  .pipe(plumber())
+  .pipe(uglify())
+  .pipe(gulp.dest('dist'));
 });
 
-/*
- * browser-sync
- */
+/*================ browser-sync ================*/
 
 gulp.task('browserSync', function() {
   browserSync.init({
@@ -69,14 +61,11 @@ gulp.task('browserSync', function() {
   })
 });
 
-/*
- * gulp-watch
- */
+/*================ gulp-watch ================*/
 
-gulp.task('watch', ['browserSync', 'sass', 'concat', 'bower'], function (){
+gulp.task('watch', ['browserSync', 'sass', 'concat'], function (){
   gulp.watch('inc/scss/**/*.scss', ['sass']);
   gulp.watch('inc/js/*.js', ['concat']);
-  gulp.watch('bower_components/**', ['bower']);
   gulp.watch('inc/js/**/*.js', browserSync.reload);
   gulp.watch('*.html', browserSync.reload);
   gulp.watch('*.php', browserSync.reload);
