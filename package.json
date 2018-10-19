@@ -1,6 +1,6 @@
 {
   "name": "bare-bones",
-  "version": "4.0.1",
+  "version": "5.0.1",
   "author": "Luke Moody <hello@lukemoody.co.uk>",
   "homepage": "https://github.com/mookecreative/bare-bones",
   "private": true,
@@ -9,7 +9,7 @@
     "url": "git://github.com/mookecreative/bare-bones"
   },
   "bugs": {
-    "url": "hhttps://github.com/mookecreative/bare-bones/issues"
+    "url": "https://github.com/mookecreative/bare-bones/issues"
   },
   "licenses": [
     {
@@ -27,8 +27,10 @@
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
-    "gulp-watch": "^4.3.11",
-    "main-bower-files": "^2.13.1"
+    "gulp-watch": "^4.3.11"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gsap": "^2.0.2",
+    "jquery": "^3.3.1"
+  }
 }
