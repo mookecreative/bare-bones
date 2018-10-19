@@ -2,19 +2,33 @@
 
 This README documents the requirements for bare-bones, created by Luke Moody (LMWD)
 
-### What is this repository for? ###
-
-Boilerplate for bespoke front-end developments.
+Blank scaffold front-end boilerplate. Write stylesheets with Sass, automatically check your JavaScript for errors, enable synchronized browser testing, and more with a Gulp based setup.
 
 * bare-bones
-* Version 4.0.5
-* https://lukemoody.co.uk
+* Version 5.0.1
+* https://www.lukemoody.co.uk
+
+### Features ###
+
+* Modern JavaScript
+* Sass for stylesheets
+* Gulp
+* BrowserSync
+* TweenMax
+* jQuery
+* FontAwesome v4.7.0
+
+### Requirements ###
+
+Ensure all dependencies have bene installed:
+
+* Node.js >= 6.9.x
+* Yarn
 
 ### Structure ###
 
 ```shell
 root/                     # → Root
-├── bower_components/     # → Bower packages (never edit)
 ├── dist/                 # → Built assets (never edit)
 ├── inc/                  # → Includes folder
 │   ├── assets/           # → Images, logo, icons etc
@@ -24,28 +38,21 @@ root/                     # → Root
 │   └── scss/             # → Sass partials, mixins and variables
 ├── node_modules/         # → Node.js packages (never edit)
 ├── .gitignore            # → Directories, files, or patterns you don't want to be tracked by version control
-├── bower.json            # → Manifest to define tasks
 ├── gulpfile.json         # → Manifest to define tasks
 ├── package.json          # → Node.js dependencies and scripts
 └── ...
 ```
 
-### What's being used? ###
+### Pre-install ###
 
-* Node.js
-* Bower
-* Gulp
-* TweenMax
-* FontAwesome v4.7.0
-* jQuery
-* Sass
-* BrowserSync
+* Copy bare-bones-wp files into your `theme` directory
+* Rename `bare-bones` theme folder name to a project specific reference
 
-### How to install? ###
+### How to install ###
 
 * Change to the project's root directory.
-* Install project dependencies with `npm install`
-* Run `bower install` to install Bower components
+* Install project dependencies with `yarn`
+* BrowserSync - If you’re already running a local server with PHP or similar, you’ll need to use the proxy mode. Open gulpfile.json and replace `http://local.dev/` with your local development url
 * Run Gulp with `gulp watch`
 
 ### Who do I talk to? ###
