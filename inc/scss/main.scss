@@ -7,13 +7,17 @@
 
 /*================ Components ================*/
 
-@import 'components/core';
+@import 'components/resets';
+@import 'components/normalize';
+
+@import 'components/global';
 @import 'components/buttons';
 @import 'components/forms';
 @import 'components/grid';
 @import 'components/typography';
 @import 'components/links';
 @import 'components/spacing';
+@import 'components/tables';
 
 /*================ Layouts ================*/
 

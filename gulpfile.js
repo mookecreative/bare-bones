@@ -32,7 +32,10 @@ gulp.task('concat', function () {
   // inc/js/src/main.js
   gulp.src([
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/gsap/TweenlineMax.js',
+    'node_modules/gsap/src/uncompressed/TweenMax.js',
+    'node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
+    'node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
+    'node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js',
     'inc/js/libs/*.js',
     'inc/js/*.js'
   ])
@@ -42,7 +45,10 @@ gulp.task('concat', function () {
   // dist/main.min.js
   gulp.src([
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/gsap/TweenlineMax.js',
+    'node_modules/gsap/src/uncompressed/TweenMax.js',
+    'node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
+    'node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
+    'node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js',
     'inc/js/libs/*.js',
     'inc/js/*.js'
   ])

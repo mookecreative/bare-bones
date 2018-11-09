@@ -5,7 +5,7 @@ This README documents the requirements for bare-bones, created by Luke Moody (LM
 Blank scaffold front-end boilerplate. Write stylesheets with Sass, automatically check your JavaScript for errors, enable synchronized browser testing, and more with a Gulp based setup.
 
 * bare-bones
-* Version 5.0.1
+* Version 5.0.2
 * https://www.lukemoody.co.uk
 
 ### Features ###
@@ -14,8 +14,9 @@ Blank scaffold front-end boilerplate. Write stylesheets with Sass, automatically
 * Sass for stylesheets
 * Gulp
 * BrowserSync
-* TweenMax
 * jQuery
+* TweenMax
+* ScrollMagic
 * FontAwesome v4.7.0
 
 ### Requirements ###

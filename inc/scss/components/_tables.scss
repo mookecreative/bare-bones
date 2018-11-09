@@ -1,0 +1,38 @@
+/*================ Table Styles ================*/
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+th{
+  text-align: left;
+  background: #f2f2f2;
+}
+
+th,
+td{
+  padding: 4px 7px;
+  border: 1px solid #e1e1e1;
+}
+
+table td[class*="col-"],
+table th[class*="col-"] {
+  position: static;
+  display: table-cell;
+  float: none;
+}
+
+table col[class*="col-"] {
+  position: static;
+  display: table-column;
+  float: none;
+}
+
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #777;
+  text-align: left;
+}
