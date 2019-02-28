@@ -34,15 +34,19 @@
   </head>
   <body class="<?=basename($_SERVER['PHP_SELF'],'.php')?>">
 
-    <div class="container spacing">
-      <div class="row">
-        <div class="grid-xs-12 grid-sm-8 grid-md-8">
-          <h1>Hello World</h1>
-          <p>Welcome to Bare Bones a boilerplate for bespoke front-end developments.</p>
-          <p>This is a default page.</p>
+    <main role="main"><!-- main content : BEGIN -->
+
+      <section class="container spacing">
+        <div class="row">
+          <div class="grid-xs-12 grid-sm-8 grid-md-8">
+            <h1>Hello World</h1>
+            <p>Welcome to Bare Bones a boilerplate for bespoke front-end developments.</p>
+            <p>This is a default page.</p>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+    </main><!-- main content : END -->
 
     <script src="dist/main.min.js"></script>
   </body>
